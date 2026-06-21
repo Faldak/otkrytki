@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toigakel - онлайн шақыру</title>
+  <meta name="description" content="Қазақы тойға арналған онлайн шақырулар. Үлгі таңдаңыз, деректер енгізіңіз — дайын шақыру сілтемесін алыңыз.">
+  <link rel="icon" type="image/png" href="assets/images/toigakel-swan.png?v=260611-toigakel">
+  <link rel="apple-touch-icon" href="assets/images/toigakel-swan.png?v=260611-toigakel">
+  <link rel="stylesheet" href="css/main.css?v=260613-v3">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <a class="brand" href="#top" aria-label="toigakel">
+        <span class="brand-mark">
+          <img src="assets/images/toigakel-swan.png" alt="" aria-hidden="true">
+        </span>
+        <span class="brand-text">
+          <strong>toigakel</strong>
+          <small data-i18n="brandSub">тойға арналған онлайн шақыру</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="top-nav" id="mainNav" aria-label="Main menu">
+        <a href="#templates" data-i18n="navTemplates">Үлгілер</a>
+        <a href="#process" data-i18n="navProcess">Қалай тапсырыс береді</a>
+        <a href="#contacts">WhatsApp</a>
+        <select class="lang-select" id="languageSelect" aria-label="Language">
+          <option value="kk">Қазақша</option>
+          <option value="uz">O'zbekcha</option>
+          <option value="ru">Русский</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="section-label" data-i18n="heroLabel">Қазақы тойға арналған шақырулар</p>
+          <h1 data-i18n="heroTitle">Қонаққа жылы жететін онлайн шақыру</h1>
+          <p class="hero-text" data-i18n="heroText">Үлгіні таңдаңыз, дайын мысалды көріңіз, мәліметтерді толтырыңыз. Біз оны жеке сілтемесі бар тірі шақыруға айналдырамыз.</p>
+          <p class="discount-note" data-i18n="discount">Скидка до 31 июня на все открытки</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#templates" data-i18n="heroPrimary">Шақыру таңдау</a>
+            <a class="light-btn" href="#process" data-i18n="heroSecondary">Қалай жұмыс істейді</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <span class="panel-label" data-i18n="quickOrder">Жылдам тапсырыс</span>
+          <h2 data-i18n="chooseHoliday">Мерекені таңдаңыз</h2>
+          <div class="hero-category-list" id="quickCategoryList">
+            <button type="button" data-quick-category="uilenu" data-i18n-btn="catUilenu">Үйлену тойы</button>
+            <button type="button" data-quick-category="sundet" data-i18n-btn="catSundet">Сүндет той</button>
+            <button type="button" data-quick-category="besik" data-i18n-btn="catBesik">Бесік той</button>
+            <button type="button" data-quick-category="merey" data-i18n-btn="catMerey">Мерей той</button>
+            <button type="button" data-quick-category="asberu" data-i18n-btn="catAsberu">Ас беру</button>
+          </div>
+          <p data-i18n="quickOrderText">Шақыру бөлек бет болып ашылады. Әр тапсырыстың өз сілтемесі болады.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section templates-section" id="templates">
+      <div class="wrap section-head">
+        <p class="section-label" data-i18n="templatesLabel">Үлгілер</p>
+        <h2 data-i18n="templatesTitle">Алдымен мерекені, содан кейін шақыру үлгісін таңдаңыз</h2>
+        <p data-i18n="templatesText">Әр үлгіде жалпы мысал бар. Мысалды ашып көріп, ұнаса тапсырыс бересіз.</p>
+      </div>
+
+      <div class="wrap category-tabs" id="categoryTabs" aria-label="Categories"></div>
+      <div class="wrap templates-grid" id="templatesGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="wrap section-head">
+        <p class="section-label" data-i18n="processLabel">Процесс</p>
+        <h2 data-i18n="processTitle">Қонаққа түсінікті, сізге ыңғайлы</h2>
+      </div>
+
+      <div class="wrap process-grid">
+        <article>
+          <span>01</span>
+          <h3 data-i18n="step1Title">Үлгі таңдау</h3>
+          <p data-i18n="step1Text">Клиент мерекеге лайық үлгіні таңдап, мысалын көреді.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3 data-i18n="step2Title">Дерек енгізу</h3>
+          <p data-i18n="step2Text">Есімдер, күн, уақыт, мекенжай, 2ГИС сілтемесі және мәтін енгізіледі.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-i18n="step3Title">Музыка және фото</h3>
+          <p data-i18n="step3Text">Дайын музыканы таңдауға немесе өз файлын қосуға болады.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3 data-i18n="step4Title">Төлем және сілтеме</h3>
+          <p data-i18n="step4Text">Төлемнен кейін админкада жеке сілтеме сақталады.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ORDER MODAL -->
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalDialogTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close" data-i18n="close">Жабу</button>
+
+      <!-- STEP 0: Choose mode (сам / менеджер) -->
+      <div class="modal-step modal-step-choose active" id="chooseStep">
+        <div>
+          <p class="section-label" data-i18n="chooseLabel">Тапсырыс</p>
+          <h2 class="choose-mode-title" id="modalDialogTitle" data-i18n="chooseModeTitle">Қалай жасаймыз?</h2>
+          <p class="choose-mode-sub" data-i18n="chooseModeSubtitle">Өзіңіз толтырасыз ба, әлде менеджер жасасын ба?</p>
+          <div class="choose-mode-cards">
+            <button class="mode-card mode-card--primary" type="button" id="modeDoItMyself">
+              <span class="mode-card-icon">✏️</span>
+              <span class="mode-card-title" data-i18n="modeSelfTitle">Өзім жасаймын</span>
+              <span class="mode-card-desc" data-i18n="modeSelfDesc">Барлық деректерді өзім енгіземін, алдын ала көремін</span>
+            </button>
+            <button class="mode-card" type="button" id="modeAskManager">
+              <span class="mode-card-icon">💬</span>
+              <span class="mode-card-title" data-i18n="modeManagerTitle">Менеджерге өткізу</span>
+              <span class="mode-card-desc" data-i18n="modeManagerDesc">WhatsApp арқылы менеджер жасап береді</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP PREVIEW (template preview) -->
+      <div class="modal-step modal-step-preview" id="previewStep">
+        <div class="modal-preview" id="modalPreview">
+          <span class="preview-kicker" id="previewCategory">Үйлену тойы</span>
+          <h2 id="previewTitle">Алтын шаңырақ</h2>
+          <p id="previewSample">Шақыру осылай көрінеді</p>
+          <div class="preview-lines">
+            <span data-i18n="previewLine1">Мұнда үлгінің жалпы көрінісі көрсетіледі</span>
+            <span data-i18n="previewLine2">Тапсырыста мәтін, күн және мекенжай ауысады</span>
+          </div>
+        </div>
+
+        <div class="modal-info">
+          <h2 data-i18n="previewTitleText">Үлгінің қалай көрінетінін қараңыз</h2>
+          <p id="previewText">Бұл жерде дайын шақырудың стилі көрсетіледі.</p>
+          <dl class="modal-meta">
+            <div>
+              <dt data-i18n="format">Формат</dt>
+              <dd id="previewFormat">Веб-шақыру</dd>
+            </div>
+            <div>
+              <dt>Бағасы</dt>
+              <dd id="previewPrice">590 тг · бұрын 1 990 тг</dd>
+            </div>
+          </dl>
+          <div class="modal-actions-stack">
+            <div class="example-actions">
+              <a class="light-btn form-light" id="exampleLink" href="#" target="_blank" rel="noreferrer" data-i18n="openWebExample">Веб-ашықхат үлгісі</a>
+            </div>
+            <button class="primary-btn wide-btn" type="button" id="nextToChooseMode" data-i18n="continueOrder">Тапсырыс беру</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MULTI-STEP FORM -->
+      <form class="modal-step order-form" id="orderForm" enctype="multipart/form-data">
+
+        <!-- Progress bar -->
+        <div class="form-steps-bar" id="formStepsBar">
+          <div class="form-step-dot active" id="dotStep1">
+            <div class="form-step-dot-circle">1</div>
+          </div>
+          <div class="form-step-line" id="line12"></div>
+          <div class="form-step-dot" id="dotStep2">
+            <div class="form-step-dot-circle">2</div>
+          </div>
+          <div class="form-step-line" id="line23"></div>
+          <div class="form-step-dot" id="dotStep3">
+            <div class="form-step-dot-circle">3</div>
+          </div>
+          <div class="form-step-line" id="line34"></div>
+          <div class="form-step-dot" id="dotStep4">
+            <div class="form-step-dot-circle">4</div>
+          </div>
+        </div>
+
+        <!-- FORM STEP 1: Names -->
+        <div class="form-step-content active" id="formStep1">
+          <div class="form-head">
+            <div class="form-head-text">
+              <p class="section-label" data-i18n="step1FormLabel">1-қадам</p>
+              <h2 data-i18n="step1FormTitle">Есімдер</h2>
+            </div>
+            <button class="text-btn" type="button" id="backToPreviewFromForm" data-i18n="backToPreview">Мысалға қайту</button>
+          </div>
+
+          <!-- Dynamic name fields — rendered by JS -->
+          <div id="nameFieldsContainer"></div>
+
+          <div class="form-nav">
+            <div></div>
+            <div class="form-nav-right">
+              <button class="primary-btn" type="button" id="step1Next" data-i18n="nextStep">Келесі →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM STEP 2: Date & Location -->
+        <div class="form-step-content" id="formStep2">
+          <div class="form-head">
+            <div class="form-head-text">
+              <p class="section-label" data-i18n="step2FormLabel">2-қадам</p>
+              <h2 data-i18n="step2FormTitle">Күн және орын</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="eventDate" data-i18n="eventDate">Күні</label>
+              <input id="eventDate" name="eventDate" type="date" required>
+            </div>
+            <div class="form-row">
+              <label for="eventTime" data-i18n="eventTime">Уақыты</label>
+              <input id="eventTime" name="eventTime" type="time" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="eventCity" data-i18n="eventCity">Қала</label>
+            <input id="eventCity" name="eventCity" type="text" placeholder="Алматы" required>
+          </div>
+
+          <div class="form-row">
+            <label for="address" data-i18n="address">Толық мекенжай</label>
+            <input id="address" name="address" type="text" placeholder="Қызылорда қаласы, тойхана атауы" required>
+          </div>
+
+          <div class="form-row">
+            <label for="gisLink" data-i18n="gisLink">2ГИС сілтемесі</label>
+            <input id="gisLink" name="gisLink" type="url" placeholder="https://2gis.kz/...">
+          </div>
+
+          <div class="form-nav">
+            <button class="light-btn form-light" type="button" id="step2Prev" data-i18n="prevStep">← Артқа</button>
+            <div class="form-nav-right">
+              <button class="primary-btn" type="button" id="step2Next" data-i18n="nextStep">Келесі →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM STEP 3: Text & Organizer -->
+        <div class="form-step-content" id="formStep3">
+          <div class="form-head">
+            <div class="form-head-text">
+              <p class="section-label" data-i18n="step3FormLabel">3-қадам</p>
+              <h2 data-i18n="step3FormTitle">Мәтін және ұйымдастырушылар</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="inviteLanguage" data-i18n="inviteLanguage">Шақыру тілі</label>
+              <select id="inviteLanguage" name="inviteLanguage">
+                <option value="kk">Қазақша</option>
+                <option value="uz">O'zbekcha</option>
+                <option value="ru">Русский</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="productType" data-i18n="productType">Формат</label>
+              <select id="productType" name="productType">
+                <option value="Сайт-открытка" data-i18n="webCard">Сайт-шақыру</option>
+              </select>
+              <p class="price-note" id="selectedPrice">590 тг · бұрын 1 990 тг</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="readyText" data-i18n="readyText">Дайын мәтін</label>
+            <select id="readyText" name="readyText"></select>
+          </div>
+
+          <div class="form-row">
+            <label for="customText" data-i18n="customText">Шақыру мәтіні</label>
+            <textarea id="customText" name="customText" rows="4"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="organizerNames" data-i18n="organizerNames">Той иелері</label>
+            <input id="organizerNames" name="organizerNames" type="text" placeholder="Сапар мен Айгерім отбасы">
+          </div>
+
+          <div class="form-row">
+            <label for="phone">WhatsApp / Телефон *</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 700 000 00 00" required>
+          </div>
+
+          <input id="orderPrice" name="price" type="hidden" value="590">
+          <input id="orderOldPrice" name="oldPrice" type="hidden" value="1990">
+
+          <div class="form-nav">
+            <button class="light-btn form-light" type="button" id="step3Prev" data-i18n="prevStep">← Артқа</button>
+            <div class="form-nav-right">
+              <button class="primary-btn" type="button" id="step3Next" data-i18n="nextStep">Келесі →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM STEP 4: Media -->
+        <div class="form-step-content" id="formStep4">
+          <div class="form-head">
+            <div class="form-head-text">
+              <p class="section-label" data-i18n="step4FormLabel">4-қадам</p>
+              <h2 data-i18n="step4FormTitle">Фото және музыка</h2>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="customPhoto" data-i18n="customPhoto">Фото (міндетті емес)</label>
+            <input id="customPhoto" name="customPhoto" type="file" accept="image/*">
+            <small data-i18n="photoHint">Егер фото жүктемесеңіз, шаблондық сурет пайдаланылады</small>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="musicSelect" data-i18n="music">Музыка</label>
+              <select id="musicSelect" name="musicSelect"></select>
+            </div>
+            <div class="form-row" id="customMusicRow">
+              <label for="customMusic" data-i18n="customMusic">Өз музыкаңызды қосу</label>
+              <input id="customMusic" name="customMusic" type="file" accept="audio/*">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="clientName" data-i18n="clientName">Сіздің атыңыз</label>
+            <input id="clientName" name="clientName" type="text" placeholder="Сапар" required>
+          </div>
+
+          <div class="form-nav">
+            <button class="light-btn form-light" type="button" id="step4Prev" data-i18n="prevStep">← Артқа</button>
+            <div class="form-nav-right">
+              <button class="light-btn form-light" type="button" id="step4Preview" data-i18n="previewBtn">Алдын ала қарау 👁</button>
+              <button class="primary-btn" type="button" id="step4Next" data-i18n="submitOrder">✅ Тапсырыс беру</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-status" id="orderStatus" aria-live="polite"></div>
+      </form>
+
+      <!-- FULL PREVIEW STEP (read-only) -->
+      <div class="modal-step modal-step-full-preview" id="fullPreviewStep">
+        <button class="preview-back-link" type="button" id="backToFormBtn">← Артқа</button>
+        <div class="invitation-preview-wrap">
+          <div class="invitation-preview-card" id="invPreviewCard">
+            <iframe id="previewIframe" src="about:blank" style="width:100%; height:100%; border:none; background:#fff;"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <footer class="site-footer" id="contacts">
+    <div class="wrap footer-grid">
+      <p>toigakel</p>
+      <a id="footerWhatsapp" href="#" target="_blank" rel="noreferrer" data-i18n="writeWhatsapp">WhatsApp-қа жазу</a>
+      <a href="https://www.pexels.com/" target="_blank" rel="noreferrer">Фото: Pexels</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js?v=260613-v3"></script>
+</body>
+</html>
